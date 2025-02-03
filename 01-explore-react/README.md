@@ -1,8 +1,36 @@
-# React + Vite
+# Explore React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 01. Initialize project with vite
 
-Currently, two official plugins are available:
+```bash
+npx create-vite@latest
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm create vite@latest
+```
+
+### 02. Install dependencies
+
+```bash
+npm install
+```
+
+### 03. Run project
+
+```bash
+npm run dev
+```
+
+### 04. Delete unnecessary files
+
+- Delete `src/assets`
+- Delete `src/main.css`
+- Delete `src/App.css`
+- Delete `src/index.css`
+- Delete `src/logo.svg`
+
+### 05. Then make your folder structure
+
+
+
