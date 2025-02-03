@@ -30,7 +30,8 @@ npm run dev
 - Delete `src/index.css`
 - Delete `src/logo.svg`
 
-### 05. Then make your folder structure
+
+
 
 
 
