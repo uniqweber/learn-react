@@ -8,5 +8,5 @@
 
 - `copyClipboard`
 
-- ```useRef``` hook 
-- ```props``` passing component show of hide
+- `useRef` hook
+- `props` passing component show of hide
