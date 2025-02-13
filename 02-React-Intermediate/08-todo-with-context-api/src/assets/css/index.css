@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-josefin: "Josefin Sans", "serif";
+}
+
+* {
+  @apply font-josefin select-none;
+}
+
+@layer components {
+  .smooth-transition {
+    @apply transition-all duration-300;
+  }
+}
+
+button {
+  cursor: pointer;
+}
