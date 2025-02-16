@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const DeleteConfirmation = ({ showModal, onDelete }) => {
+const DeleteConfirmation = ({  onDelete , setShowModal }) => {
   useEffect(() => {
     document.body.style.overflowY = "hidden";
     return () => (document.body.style.overflowY = "auto");
@@ -12,7 +12,7 @@ const DeleteConfirmation = ({ showModal, onDelete }) => {
         <h2 className="text-lg font-semibold">Are you sure?</h2>
         <p className="text-gray-600">Do you really want to delete this item?</p>
         <div className="flex gap-4 mt-4 ">
-          <button onClick={showModal} className="px-4 py-2 hover:bg-gray-500 bg-gray-300 rounded-md cursor-pointer">
+          <button onClick={() => setShowModal(false)} className="px-4 py-2 hover:bg-gray-500 bg-gray-300 rounded-md cursor-pointer">
             Cancel
           </button>
           <button onClick={onDelete} className="px-4 py-2 bg-red-500 hover:bg-red-800 text-white rounded-md cursor-pointer">

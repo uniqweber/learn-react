@@ -23,9 +23,13 @@ const ReduxTodo = () => {
         <div>
           <h2 className="text-2xl  font-medium tracking-wide border-b pb-4 border-gray-700">Todo List 📋</h2>
           <div className="mt-6 asdfadsf adslfjaldsf asfdlakdfj adfslkjaldsf adsfkjalksdf a adkfjalsdf aldskfjalkdsfj alkdfsjal;ksdfj aakdjfaklds f">
-            {todos.map((todo) => (
-              <Todo key={todo.id} {...todo} editable={isEditable === todo.id} setEditable={setIsEditable} />
-            ))}
+            {
+              todos.length > 0 ? (
+                todos.map((todo) => <Todo key={todo.id} {...todo} isEditable={isEditable} setIsEditable={setIsEditable} />)
+              ) : (
+                <p className="text-gray-400 h-50 flex items-center justify-center text-2xl font-medium ">No todos found 😩</p>
+              )
+            }
           </div>
         </div>
         <form onSubmit={handleSubmit} className="flex items-center min-h-50">

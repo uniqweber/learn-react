@@ -1,11 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaEdit, FaSave, FaTrash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { completeTodo, deleteTodo, updateTodo } from "../../../features/todoSlice/todoSlice";
+import DeleteConfirmation from "../../../components/UI/DeleteConfirmation";
 
 const Todo = ({ id, text, isComplete, editable, setEditable }) => {
   const [updatedText, setUpdatedText] = useState(text);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    dispatch(deleteTodo(id));
+  };
+
+  useEffect(() => {
+    if (!editable) {
+      setUpdatedText(text);
+    }
+  }, [editable, text]);
 
   return (
     <div
@@ -32,7 +44,8 @@ const Todo = ({ id, text, isComplete, editable, setEditable }) => {
       ) : (
         !isComplete && <FaEdit className="text-2xl" onClick={() => setEditable(id)} />
       )}
-      <FaTrash onClick={() => dispatch(deleteTodo(id))} />
+      <FaTrash className="text-2xl" onClick={() => setShowDeleteModal(true)} />
+      {showDeleteModal && <DeleteConfirmation onDelete={handleDelete} setShowModal={setShowDeleteModal}  />}
     </div>
   );
 };
