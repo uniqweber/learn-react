@@ -2,12 +2,12 @@
   to see context api todo import Home component then wrap with TodoContextProvider 
  ------------------------------------------------------------ */
 
-import ReduxTodo from "./pages/details/ReduxTodo";
+import Accordions from "./pages/accordions/Accordions";
 
 const App = () => {
   return (
     <>
-      <ReduxTodo />
+      <Accordions />
     </>
   );
 };
