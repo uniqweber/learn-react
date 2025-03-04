@@ -5,7 +5,7 @@ const GsapText = () => {
   // TODO: Implement gsap text animation\
   useGSAP(() => {
     gsap.to("#text", { y: 0, duration: 1, opacity: 1 });
-    gsap.fromTo(".para", { opacity: 0, y: 50, duration:1 }, { opacity: 1, y: 0,  stagger: 0.5 , duration: 1 });
+    gsap.fromTo(".para", { opacity: 0, x: -1250, duration:1 }, { opacity: 1, x: 0,  stagger: 0.1 , duration: 1 });
   });
 
   return (
